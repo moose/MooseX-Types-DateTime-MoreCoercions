@@ -34,8 +34,10 @@
 
 \.DS_Store$
 \.sw.$
-(\w+-)*(\w+)-\d\.\d+(?:\.tar\.gz)?$
+\b(\w+-)*(\w+)-\d\.\d+(?:\.tar\.gz)?\b
 
 \.t\.log$
 
 \.gitignore$
+
+\bMYMETA\.
