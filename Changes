@@ -1,3 +1,4 @@
+0.07    2011-12-06 20:48:22 Europe/London
 
         - Switch back to MooseX::Types::DateTime
         - Rename to more descriptive name
