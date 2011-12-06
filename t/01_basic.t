@@ -11,7 +11,7 @@ BEGIN {
 use Test::Exception;
 use DateTime;
 
-use ok 'MooseX::Types::DateTimeX';
+use ok 'MooseX::Types::DateTime::MoreCoercions';
 
 =head1 NAME
 
@@ -29,21 +29,21 @@ This module defines the following tests.
 
 =head2 Test Class
 
-Create a L<Moose> class that is using the L<MooseX::Types::DateTimeX> types.
+Create a L<Moose> class that is using the L<MooseX::Types::DateTime::MoreCoercions> types.
 
 =cut
 
 {
-	package MooseX::Types::DateTimeX::CoercionTest;
+	package MooseX::Types::DateTime::MoreCoercions::CoercionTest;
 	
 	use Moose;
-	use MooseX::Types::DateTimeX qw(DateTime Duration);
+	use MooseX::Types::DateTime::MoreCoercions qw(DateTime Duration);
 	
 	has 'date' => (is=>'rw', isa=>DateTime, coerce=>1);
 	has 'duration' => (is=>'rw', isa=>Duration, coerce=>1);	
 }
 
-ok my $class = MooseX::Types::DateTimeX::CoercionTest->new
+ok my $class = MooseX::Types::DateTime::MoreCoercions::CoercionTest->new
 => 'Created a good class';
 
 

@@ -1,5 +1,6 @@
 
         - Switch back to MooseX::Types::DateTime
+        - Rename to more descriptive name
 
 0.06    - Updated distmeta
         - Migrated to MX:T:DateTime::ButMaintained

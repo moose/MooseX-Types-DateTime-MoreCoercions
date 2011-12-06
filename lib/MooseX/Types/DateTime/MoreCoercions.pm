@@ -1,4 +1,4 @@
-package MooseX::Types::DateTimeX;
+package MooseX::Types::DateTime::MoreCoercions;
 use strict;
 use warnings;
 
@@ -37,13 +37,13 @@ __END__
 
 =head1 NAME
 
-MooseX::Types::DateTimeX - Extensions to L<MooseX::Types::DateTime>
+MooseX::Types::DateTime::MoreCoercions - Extensions to L<MooseX::Types::DateTime>
 
 =head1 SYNOPSIS
 
     package MyApp::MyClass;
 
-    use MooseX::Types::DateTimeX qw( DateTime );
+    use MooseX::Types::DateTime::MoreCoercions qw( DateTime );
 
     has created => (
         isa => DateTime,
@@ -63,21 +63,19 @@ Please see the test case for more example usage.
 
 This module builds on L<MooseX::Types::DateTime> to add additional custom types and coercions.  Since it builds on an existing type, all coercions and constraints are inherited.
 
-The package name is left as is for legacy reasons: this module is really a Type with coercions for L<DateTimeX::Easy>. DateTimeX is just a namespace for non-core or less-official L<DateTime> modules.
-
 =head1 SUBTYPES
 
 This module defines the following additional subtypes.
 
 =head2 DateTime
 
-Subtype of 'DateTime'.  Adds an additional coercion from strings.
+Subtype of L<MooseX::Types::DateTime/DateTime>.  Adds an additional coercion from strings.
 
 Uses L<DateTimeX::Easy> to try and convert strings, like "yesterday" into a valid L<DateTime> object.  Please note that due to ambiguity with how different systems might localize their timezone, string parsing may not always return the most expected value.  IN general we try to localize to UTC whenever possible.  Feedback welcomed!
 
 =head2 Duration
 
-Subtype of 'DateTime::Duration' that coerces from a string.  We use the module L<Time::Duration::Parse> to attempt this.
+Subtype of L<MooseX::Types::DateTime/Duration> that coerces from a string.  We use the module L<Time::Duration::Parse> to attempt this.
 
 =head1 CAVEATS
 
@@ -91,6 +89,8 @@ Firstly, this module uses L<DateTimeX::Easy> which is way to more DWIM than any 
 
 =item * L<DateTimeX::Easy> Backend of this module
 
+=item * L<Time::Duration::Parse> Duration parsing backend for this module
+
 =back
 
 =head1 AUTHOR
@@ -98,6 +98,10 @@ Firstly, this module uses L<DateTimeX::Easy> which is way to more DWIM than any 
 John Napiorkowski E<lt>jjn1056 at yahoo.comE<gt>
 
 Broken into a seperate package from L<MooseX::Types::DateTime> by Evan Carroll.
+
+Forked from L<MooseX::Types::DateTimeX> and ported back to use
+L<MooseX::Types::DateTime> by Dagfinn Ilmari MannsE<aring>ker
+E<lt>ilmari@ilmari.orgE<gt>.
 
 =head1 LICENSE
 
