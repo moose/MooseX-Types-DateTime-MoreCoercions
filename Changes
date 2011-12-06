@@ -1,3 +1,6 @@
+
+        - Switch back to MooseX::Types::DateTime
+
 0.06    - Updated distmeta
         - Migrated to MX:T:DateTime::ButMaintained
 				- Fixed POD to reflect ::ButMaintained

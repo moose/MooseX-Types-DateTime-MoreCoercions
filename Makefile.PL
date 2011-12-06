@@ -12,7 +12,7 @@ requires 'namespace::clean'   => '0.08';
 requires 'Time::Duration::Parse' => '0.06';
 
 
-requires 'MooseX::Types::DateTime::ButMaintained' => '0.04';
+requires 'MooseX::Types::DateTime' => '0.06';
 
 requires 'DateTimeX::Easy' => '0.085';
 
