@@ -11,9 +11,11 @@ requires 'MooseX::Types'      => '0.04';
 requires 'namespace::clean'   => '0.08';
 requires 'Time::Duration::Parse' => '0.06';
 
-
+requires 'MooseX::Types::Moose' => '0.04';
 requires 'MooseX::Types::DateTime' => '0.07';
 
+requires 'DateTime' => '0.4302';
+requires 'DateTime::Duration' => '0.4302';
 requires 'DateTimeX::Easy' => '0.085';
 
 test_requires 'Test::use::ok'    => '0.02';
