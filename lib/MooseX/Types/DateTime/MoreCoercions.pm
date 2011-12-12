@@ -18,13 +18,13 @@ use MooseX::Types 0.04 -declare => [qw( DateTime Duration)];
 
 subtype DateTime, as MooseX::Types::DateTime::DateTime;
 coerce( DateTime,
-    @{ $MooseX::Types::DateTime::coercions{DateTime} },
+    @{ MooseX::Types::DateTime::DateTime->coercion->type_coercion_map },
     from Str, via { DateTimeX::Easy->new($_) },
 );
 
 subtype Duration, as MooseX::Types::DateTime::Duration;
 coerce( Duration,
-    @{ $MooseX::Types::DateTime::coercions{"DateTime::Duration"} },
+    @{ MooseX::Types::DateTime::Duration->coercion->type_coercion_map },
     from Str, via { 
         DateTime::Duration->new( 
             seconds => parse_duration($_)
