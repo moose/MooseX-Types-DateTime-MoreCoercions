@@ -12,7 +12,7 @@ use MooseX::Types::Moose 0.04 qw/Num HashRef Str/;
 
 use namespace::clean 0.08;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 use MooseX::Types 0.04 -declare => [qw( DateTime Duration)];
 
