@@ -1,5 +1,6 @@
 
         - Require fixed MooseX::Types::DateTime version (RT#73192)
+        - Enforce version requirements at runtime (RT#73191)
 
 0.07    2011-12-06 20:48:22 Europe/London
 

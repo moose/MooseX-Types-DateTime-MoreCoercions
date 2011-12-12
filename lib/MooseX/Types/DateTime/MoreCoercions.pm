@@ -2,18 +2,19 @@ package MooseX::Types::DateTime::MoreCoercions;
 use strict;
 use warnings;
 
-use DateTime;
-use DateTime::Duration;
-use DateTimeX::Easy; 
-use Time::Duration::Parse qw(parse_duration);
-use MooseX::Types::DateTime ();
-use MooseX::Types::Moose qw/Num HashRef Str/;
+use Moose 0.41 ();
+use DateTime 0.4302 ();
+use DateTime::Duration 0.4302 ();
+use DateTimeX::Easy 0.085 ();
+use Time::Duration::Parse 0.06 qw(parse_duration);
+use MooseX::Types::DateTime 0.07 ();
+use MooseX::Types::Moose 0.04 qw/Num HashRef Str/;
 
-use namespace::clean;
+use namespace::clean 0.08;
 
 our $VERSION = '0.07';
 
-use MooseX::Types -declare => [qw( DateTime Duration)];
+use MooseX::Types 0.04 -declare => [qw( DateTime Duration)];
 
 subtype DateTime, as MooseX::Types::DateTime::DateTime;
 coerce( DateTime,
