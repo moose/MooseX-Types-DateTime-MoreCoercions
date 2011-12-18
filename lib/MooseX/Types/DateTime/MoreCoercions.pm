@@ -98,7 +98,7 @@ Firstly, this module uses L<DateTimeX::Easy> which is way to more DWIM than any 
 
 John Napiorkowski E<lt>jjn1056 at yahoo.comE<gt>
 
-Broken into a seperate package from L<MooseX::Types::DateTime> by Evan Carroll.
+Broken into a separate package from L<MooseX::Types::DateTime> by Evan Carroll.
 
 Forked from L<MooseX::Types::DateTimeX> and ported back to use
 L<MooseX::Types::DateTime> by Dagfinn Ilmari MannsE<aring>ker
