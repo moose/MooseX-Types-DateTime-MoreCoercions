@@ -1,3 +1,5 @@
+	- Remove unneeded check for DateTime::Format::DateManip from test
+
 0.09	2012-03-06 23:58:14 Europe/London
 
 	- Use the introspection API to get MX:T:DateTime's coercions

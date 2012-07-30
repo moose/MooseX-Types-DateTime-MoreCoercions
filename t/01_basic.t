@@ -1,12 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More;
-
-BEGIN {
-    plan skip_all => "DateTime::Format::DateManip required" unless eval { require DateTime::Format::DateManip };
-    plan tests => 28;
-}
+use Test::More tests => 28;
 
 use Test::Exception;
 use DateTime;
