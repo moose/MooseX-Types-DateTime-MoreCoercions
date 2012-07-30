@@ -1,4 +1,8 @@
+0.10	2012-07-30 11:18:54 Europe/London
+
 	- Remove unneeded check for DateTime::Format::DateManip from test
+	- Rebuild with Module::Install 1.06, to avoid depending on dev
+	  release of EUMM (RT#77157)
 
 0.09	2012-03-06 23:58:14 Europe/London
 
