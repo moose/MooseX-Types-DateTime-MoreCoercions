@@ -1,3 +1,5 @@
+        - Require perl 5.8.3, as Moose does
+
 0.10	2012-07-30 11:18:54 Europe/London
 
 	- Remove unneeded check for DateTime::Format::DateManip from test

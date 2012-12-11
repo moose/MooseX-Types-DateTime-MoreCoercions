@@ -1,7 +1,7 @@
 use inc::Module::Install;
 
 name     'MooseX-Types-DateTime-MoreCoercions';
-perl_version '5.008';
+perl_version '5.008003';
 all_from 'lib/MooseX/Types/DateTime/MoreCoercions.pm';
 author   "Dagfinn Ilmari Manns\x{e5}ker <ilmari\@ilmari.org>";
 license  'perl';
