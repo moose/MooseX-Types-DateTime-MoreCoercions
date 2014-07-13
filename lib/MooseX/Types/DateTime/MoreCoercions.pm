@@ -24,8 +24,8 @@ coerce( DateTime,
 subtype Duration, as MooseX::Types::DateTime::Duration;
 coerce( Duration,
     @{ MooseX::Types::DateTime::Duration->coercion->type_coercion_map },
-    from Str, via { 
-        DateTime::Duration->new( 
+    from Str, via {
+        DateTime::Duration->new(
             seconds => parse_duration($_)
         );
     },

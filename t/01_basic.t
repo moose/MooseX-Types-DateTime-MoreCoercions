@@ -3,7 +3,7 @@ use warnings;
 
 use Test::More tests => 28;
 
-use Test::Exception;
+use Test::Exception 0.27;
 use DateTime;
 
 use ok 'MooseX::Types::DateTime::MoreCoercions';
@@ -29,13 +29,13 @@ Create a L<Moose> class that is using the L<MooseX::Types::DateTime::MoreCoercio
 =cut
 
 {
-	package MooseX::Types::DateTime::MoreCoercions::CoercionTest;
-	
-	use Moose;
-	use MooseX::Types::DateTime::MoreCoercions qw(DateTime Duration);
-	
-	has 'date' => (is=>'rw', isa=>DateTime, coerce=>1);
-	has 'duration' => (is=>'rw', isa=>Duration, coerce=>1);	
+    package MooseX::Types::DateTime::MoreCoercions::CoercionTest;
+
+    use Moose;
+    use MooseX::Types::DateTime::MoreCoercions qw(DateTime Duration);
+
+    has 'date' => (is=>'rw', isa=>DateTime, coerce=>1);
+    has 'duration' => (is=>'rw', isa=>Duration, coerce=>1);
 }
 
 ok my $class = MooseX::Types::DateTime::MoreCoercions::CoercionTest->new
@@ -70,7 +70,7 @@ coerce_ok( '2/13/1969 America/New_York', '1969-02-13T00:00:00' );
 SKIP: {
     skip "couldn't parse", 1 unless $class->date;
     isa_ok $class->date->time_zone => 'DateTime::TimeZone::America::New_York'
-	=> 'Got Correct America/New_York TimeZone';
+    => 'Got Correct America/New_York TimeZone';
 }
 
 coerce_ok( 'jan 1 2006', '2006-01-01T00:00:00' );
@@ -93,7 +93,7 @@ coerce_ok("last week");
 
 =head2 check inherited constraints
 
-Just a few tests to make sure the object, hash, etc coercions and type checks 
+Just a few tests to make sure the object, hash, etc coercions and type checks
 still work.
 
 =cut
@@ -107,29 +107,29 @@ ok my $anyobject = bless({}, 'Bogus::Does::Not::Exist')
 ok $class->date($datetime)
 => 'Passed Object type constraint test.';
 
-	isa_ok $class->date => 'DateTime'
-	=> 'Got a good DateTime Object';
+    isa_ok $class->date => 'DateTime'
+    => 'Got a good DateTime Object';
 
 dies_ok { $class->date($anyobject) } 'Does not allow the bad object';
 
 ok $class->date(1000)
 => 'Passed Num coercion test.';
 
-	isa_ok $class->date => 'DateTime'
-	=> 'Got a good DateTime Object';
-	
-	is $class->date => '1970-01-01T00:16:40'
-	=> 'Got correct DateTime';
+    isa_ok $class->date => 'DateTime'
+    => 'Got a good DateTime Object';
+
+    is $class->date => '1970-01-01T00:16:40'
+    => 'Got correct DateTime';
 
 ok $class->date({year=>2000,month=>1,day=>10})
 => 'Passed HashRef coercion test.';
 
-	isa_ok $class->date => 'DateTime'
-	=> 'Got a good DateTime Object';
-	
-	is $class->date => '2000-01-10T00:00:00'
-	=> 'Got correct DateTime';
-	
+    isa_ok $class->date => 'DateTime'
+    => 'Got a good DateTime Object';
+
+    is $class->date => '2000-01-10T00:00:00'
+    => 'Got correct DateTime';
+
 =head2 check duration
 
 make sure the Duration type constraint works as expected
@@ -139,26 +139,26 @@ make sure the Duration type constraint works as expected
 ok $class->duration(100)
 => 'got duration from integer';
 
-	is $class->duration->seconds, 100
-	=> 'got correct duration from integer';
-	
+    is $class->duration->seconds, 100
+    => 'got correct duration from integer';
+
 
 ok $class->duration('1 minute')
 => 'got duration from string';
 
-	is $class->duration->seconds, 60
-	=> 'got correct duration string';
-	
-	
+    is $class->duration->seconds, 60
+    => 'got correct duration string';
+
+
 =head1 AUTHOR
 
 John Napiorkowski E<lt>jjn1056 at yahoo.comE<gt>
 
 =head1 COPYRIGHT
 
-	Copyright (c) 2008 John Napiorkowski. All rights reserved
-	This program is free software; you can redistribute
-	it and/or modify it under the same terms as Perl itself.
+    Copyright (c) 2008 John Napiorkowski. All rights reserved
+    This program is free software; you can redistribute
+    it and/or modify it under the same terms as Perl itself.
 
 =cut
 
