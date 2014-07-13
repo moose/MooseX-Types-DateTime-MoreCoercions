@@ -22,7 +22,7 @@ test_requires 'Test::use::ok'    => '0.02';
 test_requires 'Test::Exception'  => '0.27';
 test_requires 'Test::More';
 
-repository 'git://git.moose.perl.org/MooseX-Types-DateTime-MoreCoercions.git';
+repository 'https://github.com/moose/MooseX-Types-DateTime-MoreCoercions.git';
 
 auto_install;
 
