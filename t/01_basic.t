@@ -3,7 +3,7 @@ use warnings;
 
 use Test::More tests => 28;
 
-use Test::Exception 0.27;
+use Test::Fatal;
 use DateTime;
 
 use ok 'MooseX::Types::DateTime::MoreCoercions';
@@ -110,7 +110,11 @@ ok $class->date($datetime)
     isa_ok $class->date => 'DateTime'
     => 'Got a good DateTime Object';
 
-dies_ok { $class->date($anyobject) } 'Does not allow the bad object';
+like(
+    exception { $class->date($anyobject) },
+    qr/Attribute \(date\) does not pass the type constraint/,
+   'Does not allow the bad object',
+);
 
 ok $class->date(1000)
 => 'Passed Num coercion test.';
