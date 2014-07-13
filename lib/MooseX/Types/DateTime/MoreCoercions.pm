@@ -10,10 +10,10 @@ use DateTimeX::Easy 0.085 ();
 use Time::Duration::Parse 0.06 qw(parse_duration);
 use MooseX::Types::DateTime 0.07 ();
 use MooseX::Types::Moose 0.04 qw/Num HashRef Str/;
-
 use namespace::clean 0.08;
 
 use MooseX::Types 0.04 -declare => [qw( DateTime Duration)];
+use if MooseX::Types->VERSION >= 0.42, 'namespace::autoclean';
 
 subtype DateTime, as MooseX::Types::DateTime::DateTime;
 coerce( DateTime,
