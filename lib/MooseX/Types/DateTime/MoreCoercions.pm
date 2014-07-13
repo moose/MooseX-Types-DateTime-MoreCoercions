@@ -1,6 +1,7 @@
-package MooseX::Types::DateTime::MoreCoercions;
 use strict;
 use warnings;
+package MooseX::Types::DateTime::MoreCoercions;
+# ABSTRACT: Extensions to L<MooseX::Types::DateTime>
 
 use Moose 0.41 ();
 use DateTime 0.4302 ();
@@ -11,8 +12,6 @@ use MooseX::Types::DateTime 0.07 ();
 use MooseX::Types::Moose 0.04 qw/Num HashRef Str/;
 
 use namespace::clean 0.08;
-
-our $VERSION = '0.11';
 
 use MooseX::Types 0.04 -declare => [qw( DateTime Duration)];
 
@@ -36,9 +35,7 @@ coerce( Duration,
 
 __END__
 
-=head1 NAME
-
-MooseX::Types::DateTime::MoreCoercions - Extensions to L<MooseX::Types::DateTime>
+=pod
 
 =head1 SYNOPSIS
 
@@ -101,12 +98,7 @@ John Napiorkowski E<lt>jjn1056 at yahoo.comE<gt>
 Broken into a separate package from L<MooseX::Types::DateTime> by Evan Carroll.
 
 Forked from L<MooseX::Types::DateTimeX> and ported back to use
-L<MooseX::Types::DateTime> by Dagfinn Ilmari MannsE<aring>ker
+L<MooseX::Types::DateTime> by Dagfinn Ilmari Mannsåker
 E<lt>ilmari@ilmari.orgE<gt>.
 
-=head1 LICENSE
-
-    Copyright (c) 2008 John Napiorkowski.
-
-    This program is free software; you can redistribute
-    it and/or modify it under the same terms as Perl itself.
+=cut
