@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.12      2014-07-21 14:51:38Z
         - repository has moved to the GitHub Moose organization
         - converted distribution packaging to Dist::Zilla, fixing mojibaked
           META.yml (RT#90138)
