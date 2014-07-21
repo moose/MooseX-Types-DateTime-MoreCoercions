@@ -2,6 +2,7 @@ use strict;
 use warnings;
 package MooseX::Types::DateTime::MoreCoercions;
 # ABSTRACT: Extensions to L<MooseX::Types::DateTime>
+# KEYWORDS: moose types constraints coercions date time datetime timestamp
 
 use Moose 0.41 ();
 use DateTime 0.4302 ();
