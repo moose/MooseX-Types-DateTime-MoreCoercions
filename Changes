@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.13      2014-07-30 14:23:01Z
         - fixed t/00-report-prereqs.t when CPAN::Meta is not installed
 
 0.12      2014-07-21 14:51:38Z

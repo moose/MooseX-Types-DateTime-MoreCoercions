@@ -8,7 +8,7 @@ MooseX::Types::DateTime::MoreCoercions - Extensions to L<MooseX::Types::DateTime
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 SYNOPSIS
 
