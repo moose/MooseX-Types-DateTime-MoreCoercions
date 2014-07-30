@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+        - fixed t/00-report-prereqs.t when CPAN::Meta is not installed
 
 0.12      2014-07-21 14:51:38Z
         - repository has moved to the GitHub Moose organization
