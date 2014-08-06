@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.14      2014-08-06 06:04:21Z
         - re-release to remove README.pod from shipped dist
 
 0.13      2014-07-30 14:23:01Z
