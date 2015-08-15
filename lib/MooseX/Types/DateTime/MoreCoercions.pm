@@ -4,6 +4,8 @@ package MooseX::Types::DateTime::MoreCoercions;
 # ABSTRACT: Extensions to L<MooseX::Types::DateTime>
 # KEYWORDS: moose types constraints coercions date time datetime timestamp
 
+our $VERSION = '0.15';
+
 use Moose 0.41 ();
 use DateTime 0.4302 ();
 use DateTime::Duration 0.4302 ();
