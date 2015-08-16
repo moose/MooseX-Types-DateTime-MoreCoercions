@@ -1,6 +1,6 @@
 Revision history for MooseX-Types-DateTime-MoreCoercions
 
-{{$NEXT}}
+0.15      2015-08-16 01:13:14Z
         - bump namespace::clean prereq to guarantee needed Package::Stash
           interfaces
 
