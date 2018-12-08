@@ -42,7 +42,7 @@ ok my $class = MooseX::Types::DateTime::MoreCoercions::CoercionTest->new
 => 'Created a good class';
 
 
-=head2 ParseDateTime Capabilities
+=head2 DateTime parse capabilities
 
 parse some dates and make sure the system can actually find something.
 
